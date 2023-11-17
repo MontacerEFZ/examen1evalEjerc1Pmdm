@@ -2,6 +2,7 @@
     <string name="app_name">ejerc1examen1eval</string>
     <string name="presupuesto">presupuesto viaje</string>
     <string-array name="spDestino">
+        <item>selecciona destino</item>
         <item>Paris</item>
         <item>Londres</item>
         <item>Roma</item>
@@ -19,4 +20,6 @@
     <string name="resdias">dias:</string>
     <string name="restipoViaje">tipo de viaje:</string>
     <string name="total">total:</string>
+    <string name="faltandatos">faltan datos</string>
+    <string name="volvemos">volvemos de resumen</string>
 </resources>

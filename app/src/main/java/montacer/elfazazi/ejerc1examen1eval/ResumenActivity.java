@@ -28,7 +28,14 @@ public class ResumenActivity extends AppCompatActivity {
         binding.lbDestinoResumen.setText(viaje.getDestino().toString());
         binding.lbPersonasResumen.setText(String.valueOf(viaje.getPersonas()));
         binding.lbDiasResumen.setText(String.valueOf(viaje.getDias()));
-        binding.lbTipoViajeResumen.setText(String.valueOf(viaje.getTipoViaje()));
         binding.lbTotalResumen.setText(String.valueOf(viaje.getExtras()));
+
+        binding.lbTipoViajeResumen.setText(String.valueOf(viaje.getTipoViaje()));
+
+        if (viaje.getTipoViaje() == 300){
+            binding.lbTipoViajeResumen.setText(R.string.soloida);
+        }else{
+            binding.lbTipoViajeResumen.setText(R.string.idayvuelta);
+        }
     }
 }

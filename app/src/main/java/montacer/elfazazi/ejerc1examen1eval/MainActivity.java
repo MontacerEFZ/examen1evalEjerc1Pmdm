@@ -70,22 +70,40 @@ public class MainActivity extends AppCompatActivity {
                     extrasYTotal += extras;
 
                     viaje.setExtras(extrasYTotal );
-                }
 
-                Intent intent = new Intent(MainActivity.this, ResumenActivity.class );
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("VIAJE", viaje);
-                intent.putExtras(bundle);
+                    Intent intent = new Intent(MainActivity.this, ResumenActivity.class );
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("VIAJE", viaje);
+                    intent.putExtras(bundle);
 
-                resumenViaje.launch(intent);
+                    resumenViaje.launch(intent);
+                } else {
+                Toast.makeText(MainActivity.this, R.string.faltandatos, Toast.LENGTH_SHORT).show();
+            }
+
+
             }
         });
         
         binding.btnCancelarMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viaje = crearViaje();
-                Toast.makeText(MainActivity.this, viaje.toString(), Toast.LENGTH_SHORT).show();
+                binding.spDestinosMain.setSelection(0);
+                binding.txtPersonasMain.setText("");
+                binding.txtDiasMain.setText("");
+                binding.rbIdaYVueltaMain.setChecked(false);
+                binding.rbIdaMain.setChecked(false);
+                binding.cbAlquilerCocheMain.setChecked(false);
+                binding.cbExcursionGuiadaMain.setChecked(false);
+                binding.cbTodoIncluidoMain.setChecked(false);
+                binding.cbTrasladoHotelMain.setChecked(false);
+                destino = "";
+                personas = 0;
+                dias = 0;
+                tipoViaje = 0;
+                extrasYTotal = 0;
+                viaje = null;
+
             }
         });
 
@@ -126,57 +144,11 @@ public class MainActivity extends AppCompatActivity {
         return viaje;
     }
 
-    private void inicializarLaunchers() {/*
+    private void inicializarLaunchers() {
         resumenViaje = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
             @Override
             public void onActivityResult(ActivityResult o) {
-                Viaje viaje = crearViaje();
-                int alquiler = 0;
-                int excursion = 0;
-                int traslado = 0;
-                int todo = 0;
-
-                if (viaje != null){
-
-                    if (binding.cbAlquilerCocheMain.isChecked()){
-                        alquiler = viaje.getDias()*50;
-                    }
-                    if (binding.cbAlquilerCocheMain.isChecked()){
-                        excursion = 100;
-                    }
-                    if (binding.cbAlquilerCocheMain.isChecked()){
-                        traslado = 75;
-                    }
-                    if (binding.cbAlquilerCocheMain.isChecked()){
-                        todo = viaje.getDias()*20;
-                    }
-
-                    int extras = (alquiler+excursion+traslado+todo)*viaje.getPersonas();
-                    extrasYTotal += extras;
-
-                    viaje.setExtras(extrasYTotal );
-
-7777
-                    Intent intent = new Intent();
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable("VIAJE", viaje);
-                    intent.putExtras(bundle);
-
- 777
-                }else {
-                    Toast.makeText(MainActivity.this, "faltan datos", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-      
-    }
-
-   */
-
-        resumenViaje = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-            @Override
-            public void onActivityResult(ActivityResult o) {
-                Toast.makeText(MainActivity.this, "volvemos del resumen", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.volvemos, Toast.LENGTH_SHORT).show();
             }
         });
     }
