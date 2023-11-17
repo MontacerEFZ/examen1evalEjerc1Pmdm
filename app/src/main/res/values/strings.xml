@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ejerc1examen1eval</string>
+    <string name="presupuesto">presupuesto viaje</string>
+    <string-array name="spDestino">
+        <item>Paris</item>
+        <item>Londres</item>
+        <item>Roma</item>
+    </string-array>
+    <string name="soloida">solo ida</string>
+    <string name="idayvuelta">ida y vuelta</string>
+    <string name="alquilercoche">alquiler de coche</string>
+    <string name="trasladohotel">traslado al hotel</string>
+    <string name="todoincluido">todo incluido</string>
+    <string name="excursionguiada">excursion guiada</string>
+    <string name="cancelar">cancelar</string>
+    <string name="calcular">calcular</string>
+    <string name="resdestino">destino:</string>
+    <string name="respersonas">personas:</string>
+    <string name="resdias">dias:</string>
+    <string name="restipoViaje">tipo de viaje:</string>
+    <string name="total">total:</string>
+</resources>

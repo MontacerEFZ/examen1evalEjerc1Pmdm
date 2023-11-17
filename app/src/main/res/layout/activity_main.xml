@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/presupuesto"
+        android:textSize="34sp" />
+
+    <Spinner
+        android:id="@+id/spDestinosMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/spDestino" />
+
+    <EditText
+        android:id="@+id/txtPersonasMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="personas"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtDiasMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="dias"
+        android:inputType="text" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RadioButton
+            android:id="@+id/rbIdaMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/soloida" />
+
+        <RadioButton
+            android:id="@+id/rbIdaYVueltaMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/idayvuelta" />
+
+        <CheckBox
+            android:id="@+id/cbAlquilerCocheMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alquilercoche" />
+
+        <CheckBox
+            android:id="@+id/cbTrasladoHotelMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trasladohotel" />
+
+        <CheckBox
+            android:id="@+id/cbTodoIncluidoMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/todoincluido" />
+
+        <CheckBox
+            android:id="@+id/cbExcursionGuiadaMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/excursionguiada" />
+
+        <Button
+            android:id="@+id/btnCancelarMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar" />
+
+        <Button
+            android:id="@+id/btnCalcularMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calcular" />
+    </RadioGroup>
+</LinearLayout>
